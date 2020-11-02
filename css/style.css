@@ -4,6 +4,7 @@
 body {
     font-family: 'Montserrat Alternates', sans-serif;
     margin: 0;
+    min-width: 320px;
 }
 
 li {
@@ -17,11 +18,19 @@ a {
 input {
     font-family: 'Montserrat Alternates', sans-serif;
 }
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+  } 
+
 /* header */
 
 .header {
-    height: 100px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .header-wrap {
@@ -31,7 +40,10 @@ input {
     align-items: center;
     justify-content: space-between;
     width: 1040px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
 }
 
@@ -52,9 +64,9 @@ input {
 }
 
 .header-search {
-    width: 305px;
+    width: 225px;
     height: 45px;
-    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
     border: none;
     background-color: #F8F8F8;
     padding: 0 0 0 20px;
@@ -63,28 +75,28 @@ input {
 
 .header-search-button {
     position: absolute;
-    width: 43px;
-    height: 43px;
+    width: 45px;
+    height: 45px;
     background-color:#C4D0A8;
-    margin-left: -44px;
-    margin-top: 1px;
-    border: none;
+    margin-left: 0px;
+    margin-top: 0px;
+    border: 1px;
+    border-color: #F8F8F8;
     border-radius: 0 4px 4px 0;
     padding: 0;
-    background-image: url("../img/search-button-img.png");
+    background-image: url("../img/search.svg");
     background-repeat: no-repeat;
     background-position: center;
 
 }
 
-
 .header-menu-select-city {
-
+    margin-left: 30px;
 }
 
 .header-menu-item {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     color: #0D4F3B;
 }
 
@@ -98,22 +110,41 @@ input {
     display: none;
 }
 
+.header-icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header-like {
+    background-image: url("../img/heart.svg");
+}
+
+.header-busket {
+    background-image: url("../img/basket.svg");
+}
+}
+
 /* выпадающее меню */
 
-.header-city:hover > .city-selector {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-}
-
-.city-selector li {
-    min-width:170px;
-    float:none;
-    display:list-item;
-    position: relative;
+.header-city-select {
 }
 
 
+.header-city {
+    margin-left: 50px;
+}
+
+.header-menu-select-city {
+    margin-left: 0px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0D4F3B;
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 170px;
+}
 /* рубрики */
 
 
@@ -132,17 +163,21 @@ input {
     font-size: 24px;
     font-weight: bold;
     border-radius: 5px;
-    margin-left: 10px;
+    padding-bottom: 0;
 
 }
 
-.menu-element:first-child. {
+.menu-element-href {
+    margin-left: 10px;
+}
+
+.menu-element-href:first-child. {
     margin-left: 0;
 }
 
 .menu-element-h3 {
     margin-top: 0;
-    padding-top: 12px;
+    margin-bottom: 0;
 }
 
 .for-newborn {
@@ -174,6 +209,7 @@ input {
 .main {
     width: 1040px;
     margin: 0 auto;
+    margin-top: 70px;
 }
 
 .main-content {
@@ -187,7 +223,7 @@ input {
 .upper_banners {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
+    
 }
 
 .upper-banner {
@@ -197,22 +233,26 @@ input {
 }
 
 .banner1 {
-    background-image: url("../img/upper-banner-1.jpg");
+    
 }
 
 .banner2 {
-    background-image: url("../img/upper-banner-2.jpg");
+    
 }
 
 .banner3 {
-    background-image: url("../img/upper-banner-3.jpg");
+    
 }
 
 
 /* скидки */
 
-.products {
+.main-content {
     margin-top: 70px;
+}
+
+.products {
+    
 }
 
 .product-hreader-wrap {
@@ -227,10 +267,32 @@ h2 {
     font-weight: 700;
 }
 
-.green-line {
+.greenline {
+    position: relative;
+}
+
+.greenline::after {
+    content: ' ';
+    display: block;
+    position: absolute;
     background-color: #A3BF65;
-    width: 80%;
+    width: 70%;
     height: 3px;
+    right: 0;
+    top: 45px;
+
+}
+
+.discount-img {
+    background-image: url("../img/discount-button.svg");
+    background-repeat: no-repeat;
+    background-position: left 5px center;
+}
+
+.article-button-img {
+    background-image: url("../img/aricle.svg");
+    background-repeat: no-repeat;
+    background-position: left 5px center;
 }
 
 /* карточка товара */
@@ -249,6 +311,7 @@ h2 {
 }
 
 .product-photo {
+    display: block;
     width: 150px;
     height: 180px;
     background-color: green;
@@ -306,8 +369,7 @@ h2 {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
 }
 
 .discount-button-color {
@@ -316,7 +378,42 @@ h2 {
 
 .discount-button-text {
     color: #6B2727;
+    margin-left: 30px;
 }
+
+
+
+.discount-img {
+    background-image: url("../img/discount-button.svg");
+    background-repeat: no-repeat;
+    background-position: left 5px center;
+}
+
+
+.new-img {
+    background-image: url("../img/new-background.svg");
+    background-repeat: no-repeat;
+    background-position: left 5px center;
+}
+
+
+
+.product-busket {
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/small-basket.svg")
+}
+
+.product-like {
+    border: none;
+    background-color: transparent;
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/small-heart.svg")
+}
+
 
 /* большой баннер */
 
@@ -336,6 +433,7 @@ h2 {
 
 .new-button-text {
     color: #363C4B;
+    margin-left: 30px;
 }
 
 /* статьи */
@@ -406,6 +504,7 @@ h2 {
 
 .article-button-text {
     color: #44401F;
+    margin-left: 40px;
 }
 
 /* подвал */
