@@ -457,7 +457,7 @@ h2 {
     display: flex;
 }
 
-.article-item:nth-child(2n) {
+.article-a:nth-child(2n) {
     margin-left: 5px;
 }
 
@@ -583,10 +583,29 @@ h2 {
 
 .social {
     margin-top: 25px;
+    display: flex;
 }
 
-.social-item:nth-child(n+2) {
-    margin-left: 35px;
+.social-item {
+    width: 42px;
+    height: 42px;
+    margin-right: 35px;
+}
+
+.facebook {
+    background-image: url("../img/facebook.svg")
+}
+
+.instagram {
+    background-image: url("../img/instagram.svg");
+}
+
+.vk {
+    background-image: url("../img/vk.svg");
+}
+
+.ok {
+    background-image: url("../img/ok.svg");
 }
 
 .email {
