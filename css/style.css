@@ -59,6 +59,10 @@ input {
     color: #0D4F3B;   
 }
 
+.hamburger {
+    visibility: hidden;
+}
+
 .search {
     position: relative;
 }
@@ -71,6 +75,10 @@ input {
     background-color: #F8F8F8;
     padding: 0 0 0 20px;
 
+}
+
+.search-label {
+    font-size: 0;
 }
 
 .header-search-button {
@@ -123,8 +131,13 @@ input {
 
 .header-busket {
     background-image: url("../img/basket.svg");
+    margin-right: 5px;
 }
+
+.mobile-header {
+    display: none;
 }
+
 
 /* выпадающее меню */
 
@@ -171,7 +184,7 @@ input {
     margin-left: 10px;
 }
 
-.menu-element-href:first-child. {
+.menu-element-href:first-child {
     margin-left: 0;
 }
 
@@ -184,24 +197,28 @@ input {
     color: #534A2A;
     background-color: #FFE896;
     background-image: url("../img/for-newborns-img.png");
+    background-size: contain;
 }
 
 .for-boys {
     color: #263F4E;
     background-color: #64C2C2;
     background-image: url("../img/for-boys-img.png");
+    background-size: contain;
 }
 
 .for-girls {
     color: #5B3D36;
     background-color: #F29F8D;
     background-image: url("../img/for-girls-img.png");
+    background-size: contain;
 }
 
 .for-parents {
     color: #364021;
     background-color: #A3BF65;
     background-image: url("../img/for-parents-img.png");
+    background-size: contain;
 }
 
 /* главный контент*/
@@ -219,6 +236,10 @@ input {
 }
 
 /* верхние баннеры */
+
+.mobile-carousel {
+    display: none;
+}
 
 .upper_banners {
     display: flex;
@@ -306,8 +327,8 @@ h2 {
 }
 
 .product {
-    width: 212px;
-    height: 320px;
+    width: 250px;
+    height: 340px;
 }
 
 .product-photo {
@@ -420,7 +441,6 @@ h2 {
 .big-banner {
     width: 807px;
     height: 230px;
-    background-color: green;
     margin-top: 60px;
     background-image: url("../img/long-banner.jpg");
 }
@@ -444,8 +464,7 @@ h2 {
 
 .articles-wrap {
     display: flex;
-    flex-wrap: wrap;
-  
+    flex-wrap: wrap; 
     margin-top: 60px;
 }
 
@@ -581,30 +600,38 @@ h2 {
     margin-top: 25px;
 }
 
-.social {
+.socials {
     margin-top: 25px;
     display: flex;
+    padding-left: 0;
 }
 
-.social-item {
+
+
+.socials-item:not(:nth-child(1)) {
+    margin-left: 35px;
+}
+
+
+.socials-link {
+    display: block;
     width: 42px;
     height: 42px;
-    margin-right: 35px;
 }
 
-.facebook {
+.socials-link-facebook {
     background-image: url("../img/facebook.svg")
 }
 
-.instagram {
+.socials-link-instagram {
     background-image: url("../img/instagram.svg");
 }
 
-.vk {
+.socials-link-vk {
     background-image: url("../img/vk.svg");
 }
 
-.ok {
+.socials-link-ok {
     background-image: url("../img/ok.svg");
 }
 
@@ -637,3 +664,494 @@ h2 {
     font-family: 'Montserrat Alternates', sans-serif;
     padding: 0;
 }
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+    .header-wrap {
+        width: 900px;
+    }
+
+    .logo-name {
+        font-size: 22px;
+    }
+
+    .header-search {
+        width: 200px;
+        padding-left: 15px;
+    }
+
+    .header-menu-select-city {
+        margin-left: 20px;
+        font-size: 12px;
+    }
+
+    .header-menu-item {
+        font-size: 12px;
+    }
+    
+    .menu {
+        width: 900px;
+    }
+    
+    .main {
+        width: 900px;
+    }
+    
+    .upper-banner {
+        width: 290px;
+        height: 290px;
+    }
+
+    .footer-content-wrap {
+        width: 900px;
+    }
+
+    .footer-logo-text {
+        font-size: 22px;
+    }
+
+    .footer-nav-item {
+        font-size: 14px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .header-wrap {
+        width: 768px;
+    }
+
+    .logo-svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-name {
+        font-size: 18px;
+    }
+
+    .logo-wrap {
+        margin-left: 10px;
+    }
+
+    .header-search {
+        width: 180px;
+        height: 35px;
+        padding-left: 10px;
+    }
+
+    .header-search-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header-menu-select-city {
+        margin-left: 5px;
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .header-menu-item {
+        font-size: 12px;
+    }
+    
+
+    .header-city-select {
+        width: 220px;
+    }
+
+    .header-city {
+        margin-left: 30px;
+    }
+
+    .header-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-menu-personal {
+        margin-left: 0px;
+    }
+
+    .menu {
+        width: 768px;
+    }
+
+    .menu-element {
+        width: 170px;
+        height: 121px;
+        font-size: 18px;
+    }
+
+    .main {
+        width: 768px;
+    }
+
+    .main-content {
+        width: 760px;
+    }
+
+    .upper_banners {
+        justify-content: space-around;
+    }
+
+    .upper-banner {
+        width: 250px;
+        height: 250px;
+    }
+
+    .product-block {
+        width: 750px;
+    }
+
+    .product {
+        width: 180px;
+        height: 245px;
+    }
+
+    .product-price {
+        font-size: 12px;   
+    }
+
+    .big-banner {
+        width: 760px;
+    }
+
+    .article-item {
+       width: 350px; 
+    }
+
+
+
+    .footer-content-wrap {
+        width: 768px;
+    }
+
+    .footer-logo {
+        margin-left: 10px;
+    }
+
+    .footer-logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-logo-text {
+        font-size: 18px;
+    }
+
+    .footer-nav-item {
+        font-size: 12px;
+    }
+
+    .socials-item:not(:nth-child(1)) {
+        margin-left: 25px;
+    }
+
+    .socials-link {
+        width: 35px;
+        height: 35px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .input-email {
+        width: 180px;
+        font-size: 12px;
+    }
+
+    .footer-search-button {
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .discount-block {
+        width: 50px; 
+        font-size: 12px;  
+    }
+
+    .new-block {
+        width: 55px;
+        font-size: 12px;  
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+    .header {
+
+    }
+
+    .header-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .header-city-select {
+        display: none;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    .header-menu-item {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .logo-wrap {
+        margin: 0 auto;
+    }
+
+    .mobile-menu-element {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mobile-hamburger {
+        background-image: url("../img/mobile-hamburger.svg");
+        background-size: cover
+    }
+
+    .mobile-phone {
+        background-image: url("../img/mobile-phone.svg");
+        background-size: cover;
+    }
+
+    .mobile-search {
+        background-image: url("../img/search.svg");
+        background-size: cover;
+    }
+
+    .mobile-like {
+        background-image: url("../img/heart.svg");
+        background-size: cover;
+    }
+
+    .mobile-basket {
+        background-image: url("../img/basket.svg");
+        background-size: cover;
+    }
+
+    .menu {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .menu-element-href {
+        
+        width: 40%;
+    }
+
+    .menu-element-href {
+        margin-left: 0px;
+    }
+
+    .menu-element {
+        margin-top: 20px;
+        height: 80px;
+        background-image: none;
+    }
+
+    .menu-element-h3 {
+        padding-top: 20px;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 767px;
+    }
+    
+    .upper_banners {
+        display: none;
+    }
+    .mobile-carousel {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mobile-carousel-img {
+
+
+    }
+
+    .main-content {
+        width: 100%;
+        max-width: 767px;
+    }
+
+    .h2 {
+        margin-left: 20px;
+    }
+
+
+    .product-block {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .product-button {
+        margin: 20px auto;
+    }
+
+    .big-banner {
+        background-image: url("../img/mobile-2nd-banner.jpg");
+        width: 100%;
+        background-repeat: no-repeat;
+        width: 375px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.articles-wrap {
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-a {
+    margin: 0;
+    width: 90%;
+}
+
+.article-a:nth-child(2n) {
+    margin-left: 0px;
+}
+
+.article-second-line {
+    margin-top: 0px;
+}
+
+.article-item {
+    margin-top: 21px;
+    width: 90%;
+}
+
+.footer {
+    height: auto;
+}
+
+.footer-content-wrap {
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.footer-nav {
+    width: 80%;
+    margin: 20px auto 0px;
+}
+
+.footer {
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.footer-info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone-number {
+    font-size: 18px;
+}
+
+.email {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.input-email {
+    width: 50%;
+    height: 60px;
+}
+
+.footer-search-button {
+    width: 30%;
+    height: 60px;
+}
+
+.greenline::after {
+
+    width: 50%;
+
+
+}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+    .menu-element-href {
+        
+        width: 40%;
+    }
+
+    .menu-element {
+        margin-top: 20px;
+        width: 100%;
+        height: 60px;
+        background-image: none;
+    }
+
+
+    .menu-element-h3 {
+        font-size: 16px;
+    }
+
+    .mobile-carousel-img {
+        width: 320px;
+        height: 196px;
+        max-width: 100%;
+        max-height: 100%;
+
+    } 
+
+    .big-banner {
+        width: 320px;
+        height: 196px;
+        max-width: 460px;
+        max-height:282px;
+        background-size: contain;
+    }
+
+    .article-name {
+        font-size: 14px;
+    }
+
+    .footer-search-button {
+        font-size: 14px;
+        width: 40%;
+    }
+
+    .email {
+        width: 100%;
+    }
+
+
+}
+
+
+
+

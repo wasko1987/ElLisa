@@ -10,7 +10,7 @@
         <header class="header">
             <div class="header-wrap">
                 <a href="#" class="logo-wrap">
-                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
                         <rect x="3.21429" y="4.28571" width="53.5714" height="53.5714" rx="25" fill="url(#paint0_radial)"/>
                         <path d="M10.3446 32.6941C10.8092 32.9491 11.2879 33.1855 11.788 33.3942C13.7691 34.2195 15.9943 34.6389 18.3991 34.6389C19.7332 34.6389 21.0301 34.5058 22.259 34.3011L14.9065 39.2834L26.9243 33.1254C27.7799 32.835 28.5223 32.5453 29.121 32.2933C29.1231 32.2991 29.126 32.3071 29.1289 32.3151C28.3422 35.4542 26.0756 42.2325 20.645 45.4486C17.9805 47.0259 14.928 47.5223 12.1405 47.5223C7.39638 47.5223 3.41827 46.0847 3.41827 46.0847C3.41827 46.0847 4.77536 37.4973 10.3446 32.6941Z" fill="url(#paint1_linear)"/>
                         <path d="M14.1129 23.133L22.0799 27.039C23.9045 28.8242 25.7103 30.128 26.8664 30.8792C24.7366 31.6513 21.6575 32.5019 18.3981 32.5019C16.4751 32.5019 14.4899 32.2065 12.6093 31.4219C4.88643 28.2049 1.78973 18.0007 1.78973 18.0007C1.78973 18.0007 7.17976 15.1482 13.1469 15.1482C14.0676 15.1482 15.0028 15.2211 15.9336 15.3785C15.9787 15.8562 16.032 16.3346 16.1235 16.8162C16.7625 20.1809 18.5103 23.0473 20.4798 25.3405L14.1129 23.133Z" fill="url(#paint2_linear)"/>
@@ -54,8 +54,9 @@
                     <span class="visually-hidden">Логотип сайта - ЭльЛиза</span>
                     </a>
                 <form action="" method="get" class="search">
-                    <span class="visually-hidden">Поле ввода поисковой строки</span>
-                    <input name="s" placeholder="Поиск" type="search" class="header-search">
+                    <label for="" class="search-label">поле ввода поиска
+                        <input name="s" placeholder="Поиск" type="search" class="header-search">
+                    </label>
                     <button type="submit" class="header-search-button"><span class="visually-hidden">Кнопка поиска</span></button>
                 </form>
                 <!-- <nav class="header-menu-select-city">
@@ -82,10 +83,16 @@
                     </select>
                 </form>
                 <nav class="header-menu-personal"><span class="visually-hidden">вход или регистрация</span><a href="#" class="header-menu-item">Вход/Регистрация</a></nav>
-                
-                <a href="#"><div class="header-icon header-like"></div></a>
-                <a href="#"><div class="header-icon header-busket"></div></a>
-            </div>
+                <a href="#" class=" header-like"></a>
+                <a href="#" class="header-icon header-busket"></a>
+                <nav class="mobile-header">
+                    <div class="mobile-menu-element mobile-hamburger"></div>
+                    <div class="mobile-menu-element mobile-phone"></div>
+                    <div class="mobile-menu-element mobile-search"></div>
+                    <div class="mobile-menu-element mobile-like"></div>
+                    <div class="mobile-menu-element mobile-basket"></div>
+                </nav>
+        </div>
         </header>
         <section class="menu">
             <a href="#" class="menu-element-href"><div class="menu-element for-newborn">
@@ -108,9 +115,12 @@
         <main class="main">
             <section class="upper_banners">
                 <span class="visually-hidden">Рекламные баннеры</span>
-                <img src="img/upper-banner-1.jpg" alt="" class="upper-banner banner1">
-                <img src="img/upper-banner-2.jpg" alt="" class="upper-banner banner1">
-                <img src="img/upper-banner-3.jpg" alt="" class="upper-banner banner1">
+                <a><img src="img/upper-banner-1.jpg" alt="" class="upper-banner banner1"></a>
+                <a><img src="img/upper-banner-2.jpg" alt="" class="upper-banner banner1"></a>
+                <a><img src="img/upper-banner-3.jpg" alt="" class="upper-banner banner1"></a>
+            </section>
+            <section class="mobile-carousel">
+                <img src="img/mobile_banner_1 1.jpg" alt="" class="mobile-carousel-img">
             </section>
             <div class="main-content">
                 <section class="products">
@@ -171,7 +181,7 @@
                     </div>
                     <a href="#"><div class="product-button discount-button-color discount-img"><span class="discount-button-text">все скидки</span></div></a>
                 </section>
-                <div class="big-banner"></div>
+                <a><div class="big-banner"></div></a>
                 <section class="products">
                     <div class="product-hreader-wrap greenline">
                         <span class="visually-hidden">Раздел новинки</span>
@@ -214,15 +224,15 @@
                             <img src="img/dress_6.jpg" alt="" class="product-photo">
                             <h4 class="h4 product-name">Наименование товара</h4>
                             <div class="product-info">
-                                <form class="product-busket-like product-info-item">
-                                    <button class="product-busket"></button>
-                                    <button class="product-like"></button>
-                                </form>
+                                <div class="product-price product-info-item">
+                                    <span class="old-price">300 ₽</span>
+                                    <span class="price">250 ₽</span>
+                                </div>
                                     <div class="product-discount product-info-item"><div class="discount-block">скидка</div></div>
-                                    <div class="product-busket-like product-info-item">
-                                        <img src="img/basket-small.png" alt="" class="product-busket">
-                                        <img src="img/heart-small.png" alt="" class="product-like">
-                                    </div>
+                                    <form class="product-busket-like product-info-item">
+                                        <button class="product-busket"></button>
+                                        <button class="product-like"></button>
+                                    </form>
                                     <div class="product-new product-info-item"><div class="new-block">новинка</div></div>
                             </div>
                         </div>
@@ -250,13 +260,13 @@
                         <a href="#" class="article-a"><div class="article-item article-second-line">
                             <div class="article-picture article-img-3"></div>
                             <div class="article-grey">
-                                <span class="article-name">Натуральные ткани</span>
+                                <h4 class="article-name">Натуральные ткани</h4>
                             </div>
                         </div></a>
                         <a href="#" class="article-a"><div class="article-item article-second-line">
                             <div class="article-picture article-img-4"></div>
                             <div class="article-grey">
-                                <span class="article-name">Бытовая химия и малыши</span>
+                                <h4 class="article-name">Бытовая химия и малыши</h4>
                             </div>
                         </div></a>
                     </div>
@@ -285,17 +295,20 @@
                 </nav>
                 <div class="footer-info">
                     <span class="phone-number">+7 (800) 000-00-00</span>
-                    <div class="social">
-                        <span class="visually-hidden">Социальные сети</span>
-                        <a href="#"><div class="social-item facebook"></div></a>
-                        <a href="#"><div class="social-item instagram"></div></a>
-                        <a href="#"><div class="social-item vk"></div></a>
-                        <a href="#"><div class="social-item ok"></div></a>
-                        <!-- <img src="img/facebook.png" alt="" class="social-item">
-                        <img src="img/instagram.png" alt="" class="social-item">
-                        <img src="img/VK.png" alt="" class="social-item">
-                        <img src="img/ok.png" alt="" class="social-item"> -->
-                    </div>
+                    <ul class="socials">
+                        <li class="socials-item">
+                          <a href="#0" class="socials-link socials-link-facebook"></a>
+                        </li>
+                        <li class="socials-item">
+                          <a href="#0" class="socials-link socials-link-instagram"></a>
+                        </li>
+                        <li class="socials-item">
+                          <a href="#0" class="socials-link socials-link-vk"></a>
+                        </li>  
+                        <li class="socials-item">
+                            <a href="#0" class="socials-link socials-link-ok"></a>
+                          </li>  
+                      </ul>
                     <form action="" method="get" class="email">
                         <input name="e" placeholder="Email" type="email" class="input-email">
                         <button type="submit" class="footer-search-button">Подписаться</button>
